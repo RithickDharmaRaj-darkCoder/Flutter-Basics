@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawer: Drawer(), // Drawer Left side
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
           elevation: 30, // shadow
