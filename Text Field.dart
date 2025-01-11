@@ -1,4 +1,4 @@
-// Text Field
+// Text Field - Numbers input, Text Area allocation
 
 import 'package:flutter/material.dart';
 
@@ -52,10 +52,23 @@ class MyApp extends StatelessWidget {
                     height: 10,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.message),
                         hintText: "Enter Your WhatsApp Number",
                         labelText: "WhatsApp Number",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15))),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    maxLines: 3,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.brush),
+                        hintText: "Share Your Feedback",
+                        labelText: "Feedback",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15))),
                   )
