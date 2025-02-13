@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
                 Container(
                   height: 150,
                   width: double.infinity,
-                  //color: Colors.grey,
+                  color: Colors.black12,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -108,11 +108,125 @@ class MyApp extends StatelessWidget {
                         size: 20, color: Colors.white70),
                     SizedBox(width: 5),
                   ],
+                ),
+                Container(
+                  height: 180,
+                  width: double.infinity,
+                  color: Colors.red,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 180,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 60,
+                              width: double.infinity,
+                              decoration: insertImage(
+                                  "https://lh3.googleusercontent.com/hwau7OVWx96XaME5KpRuJ0I_MscrerK6SbRH1UwYHYaxIDQQtn7RZK02LDSfBzCreidFgDsJeXyqDct6EZiH6vsV=s1280-w1280-h800"),
+                            ),
+                            Container(
+                              height: 60,
+                              width: double.infinity,
+                              decoration: insertImage(
+                                  "https://lh3.googleusercontent.com/hwau7OVWx96XaME5KpRuJ0I_MscrerK6SbRH1UwYHYaxIDQQtn7RZK02LDSfBzCreidFgDsJeXyqDct6EZiH6vsV=s1280-w1280-h800"),
+                            ),
+                            Container(
+                              height: 60,
+                              width: double.infinity,
+                              decoration: insertImage(
+                                  "https://lh3.googleusercontent.com/hwau7OVWx96XaME5KpRuJ0I_MscrerK6SbRH1UwYHYaxIDQQtn7RZK02LDSfBzCreidFgDsJeXyqDct6EZiH6vsV=s1280-w1280-h800"),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 180,
+                        width: 100,
+                        decoration: insertImage(
+                            "https://thumbs.dreamstime.com/b/gorgeous-girl-dancing-energetically-green-park-under-sun-embodying-freedom-happiness-young-woman-joyfully-sunny-336082188.jpg"),
+                      ),
+                      Container(
+                        height: 180,
+                        width: 140,
+                        decoration: BoxDecoration(
+                          color: Colors.yellow,
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 90,
+                              width: double.infinity,
+                              decoration: insertImage(
+                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS31PpssN12AN9foa0_jJTZMPw46jzoBG9jzRHEY8hNrnCb1SlloHyLNZjsYEbRqLpP0nc&usqp=CAU"),
+                            ),
+                            Container(
+                              height: 90,
+                              width: double.infinity,
+                              decoration: insertImage(
+                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS31PpssN12AN9foa0_jJTZMPw46jzoBG9jzRHEY8hNrnCb1SlloHyLNZjsYEbRqLpP0nc&usqp=CAU"),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                AppBar(
+                  title: Text("Last Week",
+                      style: TextStyle(color: Colors.white70)),
+                  toolbarHeight: 40,
+                  backgroundColor: Colors.black,
+                  actions: [
+                    Icon(Icons.check_circle_outline,
+                        size: 20, color: Colors.white70),
+                    SizedBox(width: 20),
+                    Icon(Icons.more_vert_rounded,
+                        size: 20, color: Colors.white70),
+                    SizedBox(width: 5),
+                  ],
+                ),
+                Container(
+                  height: 180,
+                  width: double.infinity,
+                  color: Colors.red,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 180,
+                        width: 180,
+                        decoration: insertImage(
+                            "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg"),
+                      ),
+                      Container(
+                        height: 180,
+                        width: 180,
+                        decoration: insertImage(
+                            "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg"),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 200,
+                  width: 360,
+                  decoration: insertImage(
+                      "https://cdn.pixabay.com/photo/2018/04/03/20/26/dice-3287955_640.jpg"),
                 )
               ],
             ),
           )),
     );
+  }
+
+  BoxDecoration insertImage(img) {
+    return BoxDecoration(
+        color: Colors.red,
+        image: DecorationImage(image: NetworkImage(img), fit: BoxFit.cover));
   }
 
   Container buildContainerHscroll(img, txt) {
